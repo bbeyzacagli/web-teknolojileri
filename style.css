@@ -1,0 +1,53 @@
+*{
+    box-sizing: border-box;
+}
+
+body 
+{
+    font-family: "Sedan", serif;
+    font-size: large;
+}
+
+.bg1 
+{
+	margin:0;
+	padding:0;
+    background-color: #f7edf9;
+}
+.bg2
+{
+    background-color: #dac4d3;
+    color:rgb(0, 0, 0);
+}
+.bg3
+{
+    background-color: #E1E1E1;
+    margin: 50px; 
+    padding: 30px;
+}
+
+.f
+{
+    padding: 10px;
+    text-size-adjust: 10;
+}
+
+.t
+{
+    font-weight: bolder;
+    color:rgb(112, 54, 167);
+}
+
+.sp 
+{
+    margin-bottom: 2em; 
+}
+
+.img
+{
+    margin-top: 30px;
+}
+
+.a{
+    margin-top: 90px;
+}
