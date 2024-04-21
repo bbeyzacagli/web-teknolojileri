@@ -6,8 +6,11 @@ body
 {
     font-family: "Sedan", serif;
     font-size: large;
+    font-weight: bold;
 }
-
+.p{
+    padding: 60px;
+}
 .bg1 
 {
 	margin:0;
@@ -21,15 +24,26 @@ body
 }
 .bg3
 {
-    background-color: #E1E1E1;
+    background-color: rgb(203, 202, 200);
     margin: 50px; 
     padding: 30px;
+}
+.bg4
+{
+    background-color: #736f65;
+    padding-top: 70px;
+}
+.bg5
+{
+    background-color: rgb(203, 202, 200);
 }
 
 .f
 {
-    padding: 10px;
-    text-size-adjust: 10;
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
 }
 
 .t
@@ -51,3 +65,48 @@ body
 .a{
     margin-top: 90px;
 }
+h1
+{
+    font-family: 'Courier New', Courier, monospace; 
+    font-size: 30px;
+}
+
+h3
+{
+    color: rgb(81, 65, 77);
+    font-family: "Sedan", serif;
+    font-size:x-large;
+    font-weight: bold;text-decoration: underline;
+}
+dt
+{
+    font-family:'Courier New', Courier, monospace;
+    font-size: medium;
+}
+
+.card-text
+{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: medium;
+    font-weight: bold;
+}
+/* .card-text1
+{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: medium;
+    font-weight: bold;
+} */
+
+x{
+    color: rgb(81, 65, 77);
+    font-family: "Sedan", serif;
+    font-size: large;
+}
+.card
+{
+    background-color: #E1E1E1;
+    width: 70%; 
+    margin: auto; 
+}
+
+
