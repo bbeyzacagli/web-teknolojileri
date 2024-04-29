@@ -51,7 +51,7 @@
 
 		<div class="container">
 			
-		<h4>
+		<p>
             <?php
             if(isset($_POST['email']) && isset($_POST['sifre'])) 
             { 
@@ -69,24 +69,24 @@
 							session_start();
 							$_SESSION['email'] = 'b211210084@ogr.sakarya.edu.tr';
 							$_SESSION['sifre'] = 'b211210084';
-							echo '<br><br><br>';
+							echo '<br><br><br><br><br><br><br><br><br>';
 							echo 'Başarıyla giriş yapıldı. Hoşgeldin B211210084.';
-							echo '<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>';
+							echo '<br><br><br><br><br><br><br><br><br><br><br>';
 
                     	}							
 						else 
 						{
-							echo '<br><br><br>';
+							echo '<br><br><br><br><br><br><br>';
 							echo 'Kullanıcı adı ya da şifre hatalı girildi.<br><br>Tekrar deneyiniz.';
-							header("Refresh: 2; url=login.html");
-							echo '<br><br><br><br><br><br><br><br><br><br><br><br><br><br>';
+							header("Refresh: 3; url=login.html");
+							echo '<br><br><br><br><br><br><br><br><br><br><br>';
 						}
 					}
 			}		 
 
 
             ?>
-        </h4>
+        </p>
 
 	</main>
 
