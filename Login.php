@@ -1,3 +1,28 @@
+<?php
+    session_start();
+    $user='b211210084@sakarya.edu.tr';
+    $pass='b211210084';
+
+    if(isset($_POST['gonder']))
+    {
+        $username=$_POST['email'];
+        $sifre=$_POST['sifre'];
+
+        if ($username==$user && $sifre==$pass)
+        {
+            $_SESSION["sifre"] = $sifre;
+            header('location:index.php');
+            exit();
+        }
+        else 
+        {
+          echo '<div style="padding: 10px; border-radius: 5px; margin:5px; margin-top:80px; border: 1px solid #90D26D;">';
+          echo 'Kullanıcı adı ya da şifre hatalı girildi.<br><br>Tekrar deneyiniz.';
+          header("Refresh: 2; url=login.php");
+          echo '<br><br><br><br><br><br><br><br><br><br><br><br><br><br>';
+        }
+    }
+?>
 <!doctype html>
 <html lang="tr">
   <head>
@@ -12,14 +37,15 @@
   
    
   <body class="bg1">  
+    
     <nav class="navbar navbar-expand-lg fixed-top border-bottom bg-dark navbar-dark">
         <div class="container-fluid">
 
-            <a class="navbar-brand" href="./index.html"><b>BEYZA ÇAĞLI</b></a>
+            <a class="navbar-brand" href="./index.php"><b>BEYZA ÇAĞLI</b></a>
             <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
                 <ul class="navbar-nav">
                     <li class="nav-item navbarClik navbarHover ">
-                        <a href="./index.html" class="nav-link text-muted">Hakkımda</a>
+                        <a href="./index.php" class="nav-link text-muted">Hakkımda</a>
                     </li>
                     <li class="nav-item  navbarClik navbarHover">
                         <a href="./Özgeçmiş.html" class="nav-link text-muted">Özgeçmiş</a>
@@ -37,7 +63,7 @@
                         <a href="./İletişim.html" class="nav-link text-muted">İletişim</a>
                     </li>
                     <li class="nav-item navbarClik navbarHover">
-                        <a href="./Login.html" class="nav-link">Login</a>
+                        <a href="./Login.php" class="nav-link">Login</a>
                     </li>
                 </ul>
             </div>
@@ -47,54 +73,46 @@
         </div>
     </nav>
 
-	<main>
+    <header>
+		<div class="bg4 text-white ">
+			<div class="container">
+					<h1><b>GİRİŞ YAPIN</b></h1>
+			</div>
+		</div>
+	</header>
 
-		<div class="container">
-			
-		<p>
-            <?php
-            if(isset($_POST['email']) && isset($_POST['sifre'])) 
-            { 
-                    $email = $_POST['email'];
-                    $sifre = $_POST['sifre'];
- 
-                    if(empty($email) || empty($sifre)) 
-                    {
-                        echo 'Bu alanı boş bırakmayın';
-                    } 
-                    else 
-                    {
-                        if($email == 'b211210084@ogr.sakarya.edu.tr' && $sifre == 'b211210084') 
-                        {
-							session_start();
-							$_SESSION['email'] = 'b211210084@ogr.sakarya.edu.tr';
-							$_SESSION['sifre'] = 'b211210084';
-							echo '<br><br><br><br><br><br><br><br><br>';
-							echo 'Başarıyla giriş yapıldı. Hoşgeldin B211210084.';
-							echo '<br><br><br><br><br><br><br><br><br><br><br>';
+    <main>
+        
+          <div class="container">
+           
+          
+           <div id="paragraf">	
+            <form  method="POST">
+              <div class="form-group">
+                <label><br><br>E-mail adresiniz:</label>
+                <input type="email" class="form-control" name="email" placeholder="'abc@sakarya.edu.tr'" required="zorunlu">
+                <small class="form-text text-muted">* Zorunlu alan </small>
+              </div>
+			  <br><br>
+              <div class="form-group">
+                <label>Şifreniz:</label>
+                <input type="password" class="form-control" name="sifre" required="zorunlu">
+                <small class="form-text text-muted">* Zorunlu alan </small>
+              </div>
+			  <br>
+               <button type="submit" class="btn btn-secondary" name="gonder">Gönder</button>
+			   <br><br><br><br><br>
+             </form>
+          </div>
+        
+          </div>
+      </main>
 
-                    	}							
-						else 
-						{
-							echo '<br><br><br><br><br><br><br>';
-							echo 'Kullanıcı adı ya da şifre hatalı girildi.<br><br>Tekrar deneyiniz.';
-							header("Refresh: 3; url=login.html");
-							echo '<br><br><br><br><br><br><br><br><br><br><br>';
-						}
-					}
-			}		 
+  </body>
+  <footer class="bg-dark f text-white text-center">
+    Beyza ÇAĞLI © 2024 
+  </footer>
 
-
-            ?>
-        </p>
-
-	</main>
-
-
-
-    <footer class="bg-dark f text-white text-center">
-        Beyza ÇAĞLI © 2024 
-    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 

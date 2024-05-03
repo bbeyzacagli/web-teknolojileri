@@ -10,16 +10,18 @@
   <title>Anasayfa</title>
 </head>
 <body class="bg1">  
+
+
   <nav class="navbar navbar-expand-lg fixed-top border-bottom bg-dark navbar-dark">
     <div class="container-fluid">
-      <a class="navbar-brand" href="./index.html"><b>BEYZA ÇAĞLI</b></a>
+      <a class="navbar-brand" href="./index.php"><b>BEYZA ÇAĞLI</b></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
         <ul class="navbar-nav">
           <li class="nav-item navbarClik navbarHover ">
-            <a href="./index.html" class="nav-link">Hakkımda</a>
+            <a href="./index.php" class="nav-link">Hakkımda</a>
           </li>
           <li class="nav-item  navbarClik navbarHover">
             <a href="./Özgeçmiş.html" class="nav-link text-muted">Özgeçmiş</a>
@@ -37,24 +39,35 @@
             <a href="./İletişim.html" class="nav-link text-muted">İletişim</a>
           </li>
           <li class="nav-item navbarClik navbarHover">
-            <a href="./Login.html" class="nav-link text-muted">Login</a>
+            <a href="./Login.php" class="nav-link text-muted">Login</a>
           </li>
         </ul>
       </div>
     </div>
   </nav>
   <header>
-		<div class="bg4 text-white ">
-			<div class="container">
-					<h1><b>Merhaba, ben Beyza.</b></h1>
-			</div>
-		</div>
+
 	</header>
   <br>
   <div class="container-fluid mx-auto px-4"> 
     <div class="row">
       <div class="col-sm-12">
-        <br><h3>BEN KİMİM?</h3>
+      <?php
+    session_start();
+    $_SESSION['expire_time'] = time() + 5; 
+    if(isset($_SESSION["sifre"])){
+        echo '<div style="background-color: gray; padding: 10px; border-radius: 5px; margin:5px; margin-top:40px; border: 1px solid #90D26D;">';
+        echo 'Hoş geldiniz, ' . $_SESSION["sifre"] . '!';
+        echo '</div>';
+        unset($_SESSION["sifre"]);
+    }
+    if(isset($_SESSION['expire_time']) && time() > $_SESSION['expire_time']) {
+        session_unset();
+        session_destroy();
+}
+?>
+        <br><br><h3>BEN KİMİM?</h3>
+
         <p><dt>&#160;2 Şubat 2002 tarihinde İstanbul Büyükçekmece'de dünyaya geldim. 5 yaşından beri Düzce'de yaşıyorum. Anaokulunu, ilkokulu, ortaokulu ve liseyi Düzce'de
            okudum. Benden 6 yaş büyük bir ablam var. Küçüklüğümden beri yol göstericim ve en iyi arkadaşım hep o oldu. Genel olarak içe kapanık ve sessiz bir yapım var. 
            Dizi ve film izlemeyi çok severim. Aksiyon, polisiye ve sitcom izlemeyi seviyorum. Ailemle flm izlerken genellikle aksiyon ve romantik komedi tercih ediyoruz. Aynı şekilde
