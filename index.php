@@ -57,7 +57,7 @@
     $_SESSION['expire_time'] = time() + 5; 
     if(isset($_SESSION["sifre"])){
         echo '<div style="background-color: gray; padding: 10px; border-radius: 5px; margin:5px; margin-top:40px; border: 1px solid #90D26D;">';
-        echo 'Hoş geldiniz, ' . $_SESSION["sifre"] . '!';
+        echo 'Hoş geldiniz, "' . $_SESSION["sifre"] . '"!';
         echo '</div>';
         unset($_SESSION["sifre"]);
     }

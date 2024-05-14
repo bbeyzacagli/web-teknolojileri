@@ -15,7 +15,7 @@ body
 {
 	margin:0;
 	padding:0;
-    background-color: #f7edf9;
+    background-color: #f9f7f9;
 }
 .bg2
 {
@@ -24,18 +24,18 @@ body
 }
 .bg3
 {
-    background-color: rgb(203, 202, 200);
+    background-color: #C4C9CF;
     margin: 50px; 
     padding: 30px;
 }
 .bg4
 {
-    background-color: #736f65;
+    background-color: #3A4148;
     padding-top: 70px;
 }
 .bg5
 {
-    background-color: rgb(203, 202, 200);
+    background-color: #C4C9CF;
 }
 
 .f
@@ -127,3 +127,13 @@ x{
     width: 70%; 
     margin: auto; 
 }
+
+
+
+
+
+
+
+
+
+

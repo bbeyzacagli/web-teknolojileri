@@ -50,7 +50,7 @@
                     <li class="nav-item  navbarClik navbarHover">
                         <a href="./Özgeçmiş.html" class="nav-link text-muted">Özgeçmiş</a>
                     </li>
-					<li class="nav-item navbarClik navbarHover">
+					          <li class="nav-item navbarClik navbarHover">
                         <a href="./Şehrim.html" class="nav-link text-muted">Şehrim</a>
                     </li>
                     <li class="nav-item navbarClik navbarHover">
