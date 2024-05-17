@@ -10,8 +10,6 @@
   <title>Anasayfa</title>
 </head>
 <body class="bg1">  
-
-
   <nav class="navbar navbar-expand-lg fixed-top border-bottom bg-dark navbar-dark">
     <div class="container-fluid">
       <a class="navbar-brand" href="./index.php"><b>BEYZA ÇAĞLI</b></a>
@@ -45,9 +43,6 @@
       </div>
     </div>
   </nav>
-  <header>
-
-	</header>
   <br>
   <div class="container-fluid mx-auto px-4"> 
     <div class="row">
@@ -57,7 +52,7 @@
     $_SESSION['expire_time'] = time() + 5; 
     if(isset($_SESSION["sifre"])){
         echo '<div style="background-color: gray; padding: 10px; border-radius: 5px; margin:5px; margin-top:40px; border: 1px solid #90D26D;">';
-        echo 'Hoş geldiniz, "' . $_SESSION["sifre"] . '"!';
+        echo 'Hoş geldiniz, ' . $_SESSION["sifre"] . '!';
         echo '</div>';
         unset($_SESSION["sifre"]);
     }
@@ -69,7 +64,7 @@
         <br><br><h3>BEN KİMİM?</h3>
 
         <p><dt>&#160;2 Şubat 2002 tarihinde İstanbul Büyükçekmece'de dünyaya geldim. 5 yaşından beri Düzce'de yaşıyorum. Anaokulunu, ilkokulu, ortaokulu ve liseyi Düzce'de
-           okudum. Benden 6 yaş büyük bir ablam var. Küçüklüğümden beri yol göstericim ve en iyi arkadaşım hep o oldu. Genel olarak içe kapanık ve sessiz bir yapım var. 
+           okudum. Benden 6 yaş büyük bir ablam var. Küçüklüğümden beri en iyi arkadaşım oldu. Genel olarak içe kapanık ve sessiz bir yapım var. 
            Dizi ve film izlemeyi çok severim. Aksiyon, polisiye ve sitcom izlemeyi seviyorum. Ailemle flm izlerken genellikle aksiyon ve romantik komedi tercih ediyoruz. Aynı şekilde
            kitap okumayı da çok severim. Bir kitabı başladığım gibi bitirmek isterim. Bu sebeple bomboş olduğum günlerde yeni kitaba başlarım. 
            <div class="row bg3 t">
