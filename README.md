@@ -1,1 +1,1 @@
-Kendimi ve memleketimi tanıtan kişisel web sitesi
+Kendimi ve memleketimi tanıttığım kişisel bir web sitesi

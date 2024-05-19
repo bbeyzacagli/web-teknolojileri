@@ -1,3 +1,17 @@
+<?php
+    session_start();
+    $_SESSION['expire_time'] = time() + 5; 
+    if(isset($_SESSION["sifre"])){
+        echo '<div style="background-color: gray; padding: 10px; border-radius: 5px; margin:5px; margin-top:40px; border: 1px solid #90D26D;">';
+        echo '<br>Hoş geldiniz, ' . $_SESSION["sifre"] . '!';
+        echo '</div>';
+        unset($_SESSION["sifre"]);
+    }
+    if(isset($_SESSION['expire_time']) && time() > $_SESSION['expire_time']) {
+        session_unset();
+        session_destroy();
+}
+?>
 <!doctype html>
 <html lang="tr">
 <head>
@@ -47,20 +61,6 @@
   <div class="container-fluid mx-auto px-4"> 
     <div class="row">
       <div class="col-sm-12">
-      <?php
-    session_start();
-    $_SESSION['expire_time'] = time() + 5; 
-    if(isset($_SESSION["sifre"])){
-        echo '<div style="background-color: gray; padding: 10px; border-radius: 5px; margin:5px; margin-top:40px; border: 1px solid #90D26D;">';
-        echo 'Hoş geldiniz, ' . $_SESSION["sifre"] . '!';
-        echo '</div>';
-        unset($_SESSION["sifre"]);
-    }
-    if(isset($_SESSION['expire_time']) && time() > $_SESSION['expire_time']) {
-        session_unset();
-        session_destroy();
-}
-?>
         <br><br><h3>BEN KİMİM?</h3>
 
         <p><dt>&#160;2 Şubat 2002 tarihinde İstanbul Büyükçekmece'de dünyaya geldim. 5 yaşından beri Düzce'de yaşıyorum. Anaokulunu, ilkokulu, ortaokulu ve liseyi Düzce'de
@@ -69,7 +69,7 @@
            kitap okumayı da çok severim. Bir kitabı başladığım gibi bitirmek isterim. Bu sebeple bomboş olduğum günlerde yeni kitaba başlarım. 
            <div class="row bg3 t">
             <h2 class="mb-0">
-              OKUDUĞUM BAZI KİTAPLAR<br>
+              SEVDİĞİM BAZI KİTAPLAR<br>
             </h2>
             <div class="card-body">
                 <a href="https://www.dr.com.tr/kitap/gece-yarisi-kutuphanesi/edebiyat/roman/dunya-roman/urunno=0001922926001">

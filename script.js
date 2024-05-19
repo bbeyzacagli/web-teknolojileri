@@ -1,16 +1,12 @@
-// Titles: https://omdbapi.com/?s=thor&page=1&apikey=fc1fef96
-// details: http://www.omdbapi.com/?i=tt3896198&apikey=fc1fef96
-
 const movieSearchBox = document.getElementById('movie-search-box');
 const searchList = document.getElementById('search-list');
 const resultGrid = document.getElementById('result-grid');
 
 // load movies from API
 async function loadMovies(searchTerm){
-    const URL = `https://omdbapi.com/?s=${searchTerm}&page=1&apikey=23e16abd`;
+    const URL = `http://b211210084.infinityfreeapp.com/proxy.php?s=${searchTerm}&page=1`;
     const res = await fetch(`${URL}`);
     const data = await res.json();
-    // console.log(data.Search);
     if(data.Response == "True") displayMovieList(data.Search);
 }
 
@@ -28,13 +24,9 @@ function displayMovieList(movies){
     searchList.innerHTML = "";
     for(let idx = 0; idx < movies.length; idx++){
         let movieListItem = document.createElement('div');
-        movieListItem.dataset.id = movies[idx].imdbID; // setting movie id in  data-id
+        movieListItem.dataset.id = movies[idx].imdbID;
         movieListItem.classList.add('search-list-item');
-        if(movies[idx].Poster != "N/A")
-            moviePoster = movies[idx].Poster;
-        else 
-            moviePoster = "image_not_found.png";
-
+        let moviePoster = movies[idx].Poster !== "N/A" ? movies[idx].Poster : "image_not_found.png";
         movieListItem.innerHTML = `
         <div class = "search-item-thumbnail">
             <img src = "${moviePoster}">
@@ -53,12 +45,10 @@ function loadMovieDetails(){
     const searchListMovies = searchList.querySelectorAll('.search-list-item');
     searchListMovies.forEach(movie => {
         movie.addEventListener('click', async () => {
-            // console.log(movie.dataset.id);
             searchList.classList.add('hide-search-list');
             movieSearchBox.value = "";
-            const result = await fetch(`http://www.omdbapi.com/?i=${movie.dataset.id}&apikey=23e16abd`);
+            const result = await fetch(`http://b211210084.infinityfreeapp.com/proxy.php?i=${movie.dataset.id}`);
             const movieDetails = await result.json();
-            // console.log(movieDetails);
             displayMovieDetails(movieDetails);
         });
     });
@@ -86,9 +76,8 @@ function displayMovieDetails(details){
     `;
 }
 
-
 window.addEventListener('click', (event) => {
-    if(event.target.className != "form-control"){
+    if(event.target.className !== "form-control"){
         searchList.classList.add('hide-search-list');
     }
 });

@@ -22,7 +22,7 @@ if (isset($_POST['gonder']))
         echo '<script>
                 setTimeout(function() 
                 {
-                    window.location.href = "login.php";
+                    window.location.href = "Login.php";
                 }, 2000);
               </script>';
         echo '<br><br><br><br><br><br><br><br><br><br><br><br><br><br>';
