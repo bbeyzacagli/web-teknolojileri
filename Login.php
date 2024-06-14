@@ -41,39 +41,25 @@ if (isset($_POST['gonder']))
     <title>Giriş Yap</title>
 </head>
 <body class="bg1">
-<nav class="navbar navbar-expand-lg fixed-top border-bottom bg-dark navbar-dark">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="./index.php"><b>BEYZA ÇAĞLI</b></a>
-        <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
-            <ul class="navbar-nav">
-                <li class="nav-item navbarClik navbarHover">
-                    <a href="./index.php" class="nav-link text-muted">Hakkımda</a>
-                </li>
-                <li class="nav-item navbarClik navbarHover">
-                    <a href="./Özgeçmiş.html" class="nav-link text-muted">Özgeçmiş</a>
-                </li>
-                <li class="nav-item navbarClik navbarHover">
-                    <a href="./Şehrim.html" class="nav-link text-muted">Şehrim</a>
-                </li>
-                <li class="nav-item navbarClik navbarHover">
-                    <a href="./Takımımız.html" class="nav-link text-muted">Takımımız</a>
-                </li>
-                <li class="nav-item navbarClik navbarHover">
-                    <a href="./İlgi_Alanlarım.html" class="nav-link text-muted">İlgi Alanlarım</a>
-                </li>
-                <li class="nav-item navbarClik navbarHover">
-                    <a href="./İletişim.html" class="nav-link text-muted">İletişim</a>
-                </li>
-                <li class="nav-item navbarClik navbarHover">
-                    <a href="./Login.php" class="nav-link">Login</a>
-                </li>
-            </ul>
+    <nav class="navbar navbar-expand-lg fixed-top border-bottom bg-dark navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="./index.php"><b>BEYZA ÇAĞLI</b></a>
+            <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item navbarClik navbarHover"><a href="./index.php" class="nav-link text-muted">Hakkımda</a></li>
+                    <li class="nav-item navbarClik navbarHover"><a href="./Özgeçmiş.html" class="nav-link text-muted">Özgeçmiş</a></li>
+                    <li class="nav-item navbarClik navbarHover"><a href="./Şehrim.html" class="nav-link text-muted">Şehrim</a></li>
+                    <li class="nav-item navbarClik navbarHover"><a href="./Takımımız.html" class="nav-link text-muted">Takımımız</a></li>
+                    <li class="nav-item navbarClik navbarHover"><a href="./İlgi_Alanlarım.html" class="nav-link text-muted">İlgi Alanlarım</a></li>
+                    <li class="nav-item navbarClik navbarHover"><a href="./İletişim.html" class="nav-link text-muted">İletişim</a></li>
+                    <li class="nav-item navbarClik navbarHover"><a href="./Login.php" class="nav-link">Login</a></li>
+                </ul>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
         </div>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-    </div>
-</nav>
+    </nav>
 
 <br><br><br>
 

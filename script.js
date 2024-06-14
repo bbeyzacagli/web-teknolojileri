@@ -2,7 +2,7 @@ const movieSearchBox = document.getElementById('movie-search-box');
 const searchList = document.getElementById('search-list');
 const resultGrid = document.getElementById('result-grid');
 
-// load movies from API
+
 async function loadMovies(searchTerm){
     const URL = `http://b211210084.infinityfreeapp.com/proxy.php?s=${searchTerm}&page=1`;
     const res = await fetch(`${URL}`);
